@@ -9,7 +9,6 @@ sections:
 - type: document
   path: datas/defaultMetas.json
   label: Metas par défaut
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
