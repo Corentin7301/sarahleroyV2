@@ -1,0 +1,48 @@
+---
+label: homePageDatas
+hide_body: true
+fields:
+- type: text
+  name: mainImage
+  label: mainImage
+- type: field_group_list
+  name: photos
+  label: photos
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: imageurl
+    label: imageurl
+- type: field_group
+  name: metas
+  label: metas
+  fields:
+  - type: text
+    name: description
+    label: description
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: imageLink
+    label: imageLink
+  - type: text
+    name: twitter
+    label: twitter
+  - type: text
+    name: twitterUrl
+    label: twitterUrl
+  - type: text
+    name: twitterTitle
+    label: twitterTitle
+  - type: text
+    name: twitterDescription
+    label: twitterDescription
+- type: text
+  name: mainimage
+  label: mainimage
