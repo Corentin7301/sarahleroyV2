@@ -4,25 +4,25 @@ hide_body: true
 fields:
 - type: text
   name: defaultDescription
-  label: defaultDescription
+  label: Description par défaut
 - type: text
   name: defaultTitle
-  label: defaultTitle
+  label: Titre par défaut
 - type: text
   name: defaultUrl
-  label: defaultUrl
+  label: Url par défaut
 - type: text
   name: defaultImageLink
-  label: defaultImageLink
+  label: Lien de la vignette par défaut
 - type: text
   name: defaultTwitter
-  label: defaultTwitter
+  label: Twitter par défaut
 - type: text
   name: defaultTwitterUrl
-  label: defaultTwitterUrl
+  label: Url Twitter par défaut
 - type: text
   name: defaultTwitterTitle
-  label: defaultTwitterTitle
+  label: Titre pour Twitter par défaut
 - type: text
   name: defaultTwitterDescription
-  label: defaultTwitterDescription
+  label: Description pour Twitter par défaut
