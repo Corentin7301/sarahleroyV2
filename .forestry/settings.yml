@@ -6,10 +6,9 @@ webhook_url:
 sections:
 - type: heading
   label: Metas
-- type: directory
-  path: src/datas
-  label: Datas
-  create: all
+- type: document
+  path: src/datas/defaultMetas
+  label: Metas par défaut
   match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
