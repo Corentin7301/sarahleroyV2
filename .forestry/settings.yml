@@ -4,11 +4,13 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: datas
+  label: Datas
+  create: all
+  match: "**/*"
 - type: heading
   label: Metas
-- type: document
-  path: datas/defaultMetas.json
-  label: Metas par défaut
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
