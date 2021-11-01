@@ -2,6 +2,15 @@
 label: homePageDatas
 hide_body: true
 fields:
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
 - type: text
   name: mainImage
   label: mainImage
