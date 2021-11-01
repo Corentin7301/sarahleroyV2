@@ -11,6 +11,7 @@
 </script>
 
 <div id="svelte" class="counter">
+<p>Svelte</p>
   <button on:click={subtract}>-</button>
   <pre>{ count }</pre>
   <button on:click={add}>+</button>
