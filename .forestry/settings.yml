@@ -11,7 +11,7 @@ sections:
   label: Photos
   create: all
   match: "**/*"
-  new_doc_ext: ".json"
+  new_doc_ext: json
 - type: heading
   label: Metas
 - type: document
