@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: Metas
 - type: directory
-  path: datas
+  path: src/datas
   label: Datas
   create: all
   match: "**/*"
