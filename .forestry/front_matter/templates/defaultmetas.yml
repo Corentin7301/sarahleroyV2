@@ -1,0 +1,28 @@
+---
+label: defaultMetas
+hide_body: true
+fields:
+- type: text
+  name: defaultDescription
+  label: defaultDescription
+- type: text
+  name: defaultTitle
+  label: defaultTitle
+- type: text
+  name: defaultUrl
+  label: defaultUrl
+- type: text
+  name: defaultImageLink
+  label: defaultImageLink
+- type: text
+  name: defaultTwitter
+  label: defaultTwitter
+- type: text
+  name: defaultTwitterUrl
+  label: defaultTwitterUrl
+- type: text
+  name: defaultTwitterTitle
+  label: defaultTwitterTitle
+- type: text
+  name: defaultTwitterDescription
+  label: defaultTwitterDescription
