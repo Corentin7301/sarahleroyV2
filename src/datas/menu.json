@@ -1,0 +1,18 @@
+[
+    {
+        "name":"Accueil",
+        "path":"/pages/index"
+    },
+    {
+        "name":"Nature",
+        "path":"/pages/nature"
+    },
+    {
+        "name":"Portrait",
+        "path":"/pages/portrait"
+    },
+    {
+        "name":"Artistique",
+        "path":"/pages/artistique"
+    }
+]
