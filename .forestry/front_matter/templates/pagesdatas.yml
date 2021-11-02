@@ -2,11 +2,6 @@
 label: pagesDatas
 hide_body: true
 fields:
-- name: mainimage
-  type: file
-  config:
-    maxSize: 5
-  label: mainImage
 - name: photos
   type: field_group_list
   fields:
@@ -15,11 +10,11 @@ fields:
     config:
       required: true
     label: Title
-  - name: imageurl
+  - name: photo
     type: file
     config:
       maxSize: 5
-    label: imageUrl
+    label: photo
   config:
     min: 
     max: 
@@ -30,23 +25,14 @@ fields:
   label: metas
   fields:
   - type: text
-    name: description
-    label: description
-  - type: text
     name: title
     label: title
   - type: text
-    name: url
-    label: url
+    name: description
+    label: description
   - type: text
     name: imageLink
     label: imageLink
-  - type: text
-    name: twitter
-    label: twitter
-  - type: text
-    name: twitterUrl
-    label: twitterUrl
   - type: text
     name: twitterTitle
     label: twitterTitle
