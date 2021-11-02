@@ -1,0 +1,20 @@
+---
+label: Informations
+hide_body: true
+fields:
+- type: text
+  name: instaUrl
+  label: instaUrl
+- type: field_group
+  name: phone
+  label: phone
+  fields:
+  - type: text
+    name: phoneLabel
+    label: phoneLabel
+  - type: text
+    name: phoneUrl
+    label: phoneUrl
+- type: text
+  name: email
+  label: email
