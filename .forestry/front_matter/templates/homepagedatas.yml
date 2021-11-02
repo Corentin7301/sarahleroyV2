@@ -21,9 +21,11 @@ fields:
   - type: text
     name: title
     label: title
-  - type: text
-    name: imageurl
-    label: imageurl
+  - name: photo
+    type: file
+    config:
+      maxSize: 5
+    label: photo
 - type: field_group
   name: metas
   label: metas
