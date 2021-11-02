@@ -33,11 +33,11 @@ fields:
   label: metas
   fields:
   - type: text
-    name: description
-    label: description
-  - type: text
     name: title
     label: title
+  - type: text
+    name: description
+    label: description
   - name: imagelink
     type: file
     config:
