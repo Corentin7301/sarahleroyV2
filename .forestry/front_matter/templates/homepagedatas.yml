@@ -38,20 +38,11 @@ fields:
   - type: text
     name: title
     label: title
-  - type: text
-    name: url
-    label: url
   - name: imagelink
     type: file
     config:
       maxSize: 5
     label: imageLink
-  - type: text
-    name: twitter
-    label: twitter
-  - type: text
-    name: twitterUrl
-    label: twitterUrl
   - type: text
     name: twitterTitle
     label: twitterTitle
