@@ -11,8 +11,10 @@ fields:
 - type: text
   name: defaultUrl
   label: Url par défaut
-- type: text
-  name: defaultImageLink
+- name: defaultImageLink
+  type: file
+  config:
+    maxSize: 5
   label: Lien de la vignette par défaut
 - type: text
   name: defaultTwitter
