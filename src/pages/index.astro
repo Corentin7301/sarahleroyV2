@@ -1,9 +1,14 @@
 ---
 import DefaultLayout from '../layouts/default.astro';
-import pageDatas from '../pagesDatas/home.json'
+import homeDatas from '../pagesDatas/home.json'
+import menu from '../datas/menu.json'
+
 ---
 
 
-<DefaultLayout client:visible title={pageDatas.metas.title} description={pageDatas.metas.description} imageLink={pageDatas.metas.imageLink} twitterTitle={pageDatas.metas.twitterTitle} twitterDescription={pageDatas.metas.twitterDescription}>
+<DefaultLayout client:visible title={homeDatas.metas.title} description={homeDatas.metas.description} imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle} twitterDescription={homeDatas.metas.twitterDescription}>
     <h2 class=" text-white bg-black">Home</h2>
+    {menu.map((item)=>{
+    return <a href={`/photos/${item.name}`}>{item.name}</a>
+    })}
 </DefaultLayout>
