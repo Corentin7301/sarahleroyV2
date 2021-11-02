@@ -4,17 +4,17 @@ hide_body: true
 fields:
 - type: text
   name: instaUrl
-  label: instaUrl
+  label: Url compte Instagram
 - type: field_group
   name: phone
-  label: phone
+  label: Numéro de téléphone
   fields:
   - type: text
     name: phoneLabel
-    label: phoneLabel
+    label: Numéro de téléphone (label)
   - type: text
     name: phoneUrl
-    label: phoneUrl
+    label: Numéro de téléphone (url)
 - type: text
   name: email
-  label: email
+  label: Adresse email
