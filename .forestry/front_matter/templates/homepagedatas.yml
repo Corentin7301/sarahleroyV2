@@ -2,6 +2,11 @@
 label: homePageDatas
 hide_body: true
 fields:
+- name: mainimage
+  type: file
+  config:
+    maxSize: 5
+  label: mainImage
 - name: description
   type: textarea
   default: ''
@@ -36,8 +41,10 @@ fields:
   - type: text
     name: url
     label: url
-  - type: text
-    name: imageLink
+  - name: imagelink
+    type: file
+    config:
+      maxSize: 5
     label: imageLink
   - type: text
     name: twitter
@@ -51,10 +58,5 @@ fields:
   - type: text
     name: twitterDescription
     label: twitterDescription
-- name: mainimage
-  type: file
-  config:
-    maxSize: 5
-  label: mainImage
 pages:
 - src/pagesDatas/home.json
