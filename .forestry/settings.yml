@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: datas/informationsDatas.json
+  label: Informations
+  match: "**/*"
 - type: heading
   label: Photos
 - type: directory
@@ -17,6 +21,8 @@ sections:
 - type: document
   path: src/datas/defaultMetas.json
   label: Metas par défaut
+- type: heading
+  label: Informations
 upload_dir: sarahleroy.fr
 public_path: "/sarahleroy.fr"
 front_matter_path: ''
