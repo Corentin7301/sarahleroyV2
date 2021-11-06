@@ -2,7 +2,7 @@
 label: homePageDatas
 hide_body: true
 fields:
-- name: mainimage
+- name: mainImage
   type: file
   config:
     maxSize: 5
