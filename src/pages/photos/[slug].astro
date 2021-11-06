@@ -1,14 +1,18 @@
 ---
 import DefaultLayout from '../../layouts/default.astro';
-// import menu from '../../datas/menu.json'
+import menu from '../../datas/menu.json'
 
 const {slug} = Astro.request.params
-const {props} = Astro.props
 import natureDatas from "../../pagesDatas/nature.json"
 import portraitDatas from "../../pagesDatas/portrait.json"
 import artistiqueDatas from "../../pagesDatas/artistique.json"
 let pageDatas = {}
+// menu.map((item)=>{
 
+//     if(slug === item.name) {
+//         return pageDatas = item.name + "Datas"
+//     }
+// })
 if(slug === "nature") {
     pageDatas = natureDatas
 }
@@ -20,19 +24,18 @@ if(slug === "artistique") {
 }
 
 
-
 export async function getStaticPaths() {
-    const d = ["portrait","nature","artistique"]
-    return d.map((menu)=> {
+    const pages = ["portrait","nature","artistique"]
+    return pages.map((pages) => {
         return [
             {
-                params: {slug: menu}
+                params: {slug: pages}
             }
         ]
-    }) 
+    })
 }
 ---
 
 <DefaultLayout client:visible title={pageDatas.metas.title} description={pageDatas.metas.description} imageLink={pageDatas.metas.imageLink} twitterTitle={pageDatas.metas.twitterTitle} twitterDescription={pageDatas.metas.twitterDescription}>
-    <h2 class=" text-white bg-black">{slug}</h2>
+    <h2 class=" text-persoBlue">{slug}</h2>
 </DefaultLayout>

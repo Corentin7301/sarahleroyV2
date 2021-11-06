@@ -6,9 +6,8 @@ import menu from '../datas/menu.json'
 ---
 
 
-<DefaultLayout client:visible title={homeDatas.metas.title} description={homeDatas.metas.description} imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle} twitterDescription={homeDatas.metas.twitterDescription}>
-    <h2 class=" text-white bg-black">Home</h2>
+<DefaultLayout client:visible menu={menu} title={homeDatas.metas.title} description={homeDatas.metas.description} imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle} twitterDescription={homeDatas.metas.twitterDescription}>
     {menu.map((item)=>{
-    return <a href={`/photos/${item.name}`}>{item.name}</a>
+    return <a href={`/photos/${item.name}`}><img src={Astro.resolve(`/assets/${item.iconPath}`)} alt={item.name}></a>
     })}
 </DefaultLayout>
