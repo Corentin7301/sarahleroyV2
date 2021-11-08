@@ -1,13 +1,11 @@
 ---
-import DefaultLayout from '../layouts/default.astro';
+import HomeLayout from '../layouts/homeLayout.astro';
 import homeDatas from '../pagesDatas/home.json'
 import menu from '../datas/menu.json'
-
 ---
 
-
-<DefaultLayout client:visible menu={menu} title={homeDatas.metas.title} description={homeDatas.metas.description} imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle} twitterDescription={homeDatas.metas.twitterDescription}>
+<HomeLayout client:visible menu={menu} title={homeDatas.metas.title} description={homeDatas.metas.description} imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle} twitterDescription={homeDatas.metas.twitterDescription}>
     {menu.map((item)=>{
     return <a href={`/photos/${item.name}`}><img src={Astro.resolve(`/assets/${item.iconPath}`)} alt={item.name}></a>
     })}
-</DefaultLayout>
+</HomeLayout>

@@ -7,12 +7,6 @@ import natureDatas from "../../pagesDatas/nature.json"
 import portraitDatas from "../../pagesDatas/portrait.json"
 import artistiqueDatas from "../../pagesDatas/artistique.json"
 let pageDatas = {}
-// menu.map((item)=>{
-
-//     if(slug === item.name) {
-//         return pageDatas = item.name + "Datas"
-//     }
-// })
 if(slug === "nature") {
     pageDatas = natureDatas
 }
@@ -22,6 +16,12 @@ if(slug === "portrait") {
 if(slug === "artistique") {
     pageDatas = artistiqueDatas  
 }
+    // menu.map((item)=>{
+    
+    //     if(slug === item.name) {
+    //         return pageDatas = item.name + "Datas"
+    //     }
+    // })
 
 
 export async function getStaticPaths() {
@@ -36,6 +36,6 @@ export async function getStaticPaths() {
 }
 ---
 
-<DefaultLayout client:visible title={pageDatas.metas.title} description={pageDatas.metas.description} imageLink={pageDatas.metas.imageLink} twitterTitle={pageDatas.metas.twitterTitle} twitterDescription={pageDatas.metas.twitterDescription}>
+<!-- <DefaultLayout client:visible title={pageDatas.metas.title} description={pageDatas.metas.description} imageLink={pageDatas.metas.imageLink} twitterTitle={pageDatas.metas.twitterTitle} twitterDescription={pageDatas.metas.twitterDescription}>
     <h2 class=" text-persoBlue">{slug}</h2>
-</DefaultLayout>
+</DefaultLayout> -->

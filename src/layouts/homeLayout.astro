@@ -1,7 +1,7 @@
 ---
 let {menu,title,description,imageLink,twitterTitle,twitterDescription} = Astro.props;
 import defaultMetas from "../datas/defaultMetas.json";
-import Header from "../components/Header.astro";
+import HomeHeader from "../components/HomeHeader.astro";
 
 ---
 <html lang="fr">
@@ -43,8 +43,8 @@ import Header from "../components/Header.astro";
 </head>
 
 <body>
-    <main class=" font-montserrat">
-        <Header client:load menu={menu}  />
+    <main class=" font-montserrat bg-lightColor">
+        <HomeHeader client:load menu={menu} />
 
         <slot />
 

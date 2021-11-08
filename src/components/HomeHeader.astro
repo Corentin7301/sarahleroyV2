@@ -1,0 +1,17 @@
+---
+const {menu} = Astro.props
+import HomeImage from "../components/HomeImage.vue"
+import Contacts from "../components/Contacts.astro"
+
+---
+
+<header>
+    <HomeImage client:visible/>
+    <Contacts/>
+    <div class="categories-container">
+        <p>Catégories</p>
+        <div class="categories-menu">
+           
+        </div>
+    </div>
+</header>
