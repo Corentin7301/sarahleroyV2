@@ -1,5 +1,5 @@
 ---
-import DefaultLayout from '../../layouts/default.astro';
+// import DefaultLayout from '../../layouts/default.astro';
 import menu from '../../datas/menu.json'
 
 const {slug} = Astro.request.params
@@ -7,29 +7,28 @@ import natureDatas from "../../pagesDatas/nature.json"
 import portraitDatas from "../../pagesDatas/portrait.json"
 import artistiqueDatas from "../../pagesDatas/artistique.json"
 let pageDatas = {}
-if(slug === "nature") {
-    pageDatas = natureDatas
-}
-if(slug === "portrait") {
-    pageDatas = portraitDatas
-}
-if(slug === "artistique") {
-    pageDatas = artistiqueDatas  
-}
-    // menu.map((item)=>{
-    
-    //     if(slug === item.name) {
-    //         return pageDatas = item.name + "Datas"
-    //     }
-    // })
+menu.map((item)=>{
+    if(slug === item.name) {
+        return pageDatas = item.name + "Datas"
+    }
+})
+//if(slug === "nature") {
+//    pageDatas = natureDatas
+//}
+//if(slug === "portrait") {
+//    pageDatas = portraitDatas
+//}
+//if(slug === "artistique") {
+//    pageDatas = artistiqueDatas  
+//}
 
 
 export async function getStaticPaths() {
     const pages = ["portrait","nature","artistique"]
-    return pages.map((pages) => {
+    return menu.map((item) => {
         return [
             {
-                params: {slug: pages}
+                params: {slug: item.name}
             }
         ]
     })
@@ -39,3 +38,4 @@ export async function getStaticPaths() {
 <!-- <DefaultLayout client:visible title={pageDatas.metas.title} description={pageDatas.metas.description} imageLink={pageDatas.metas.imageLink} twitterTitle={pageDatas.metas.twitterTitle} twitterDescription={pageDatas.metas.twitterDescription}>
     <h2 class=" text-persoBlue">{slug}</h2>
 </DefaultLayout> -->
+<h2>{slug}</h2>
