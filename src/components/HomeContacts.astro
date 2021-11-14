@@ -1,0 +1,9 @@
+---
+import informationsDatas from "../datas/informationDatas.json"
+---
+
+<div class="contact-header flex flex-col justify-center items-center bg-persoBlue w-20 h-32 space-y-3 rounded-md shadow-xl">
+    <a href={informationsDatas.instaUrl} target="_blank"><img src={Astro.resolve('/assets/instagram-icon.svg')}
+            alt="instagram" class=" w-11 h-11 text-lightColor"></a>
+    <button><img src={Astro.resolve('/assets/envelope-icon.svg')} alt="" class=" w-10 h-10 text-lightColor"></button>
+</div>

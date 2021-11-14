@@ -1,0 +1,16 @@
+---
+const {menu} = Astro.props
+---
+<div class="relative">
+    <div class="categories-container absolute -top-10 right-11 w-2/3 bg-persoBlue rounded-md shadow-xl px-7 py-3">
+        <p class=" text-lightColor text-center mb-3">Catégories</p>
+        <div class="categories-menu flex justify-center items-center space-x-7">
+            {menu.map((item)=>{
+            if(item.name != "accueil") {
+            return <a href={`/photos/${item.name}`}> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
+                alt={item.name} class=" w-11 shadow-xl" /></a>
+            }
+            })}
+        </div>
+    </div>
+</div>

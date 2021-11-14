@@ -1,6 +1,8 @@
 ---
 // import DefaultLayout from '../../layouts/default.astro';
 import menu from '../../datas/menu.json'
+import Menu from "../../components/Menu.astro"
+
 
 const {slug} = Astro.request.params
 import natureDatas from "../../pagesDatas/nature.json"
@@ -39,3 +41,4 @@ export async function getStaticPaths() {
     <h2 class=" text-persoBlue">{slug}</h2>
 </DefaultLayout> -->
 <h2>{slug}</h2>
+    <Menu menu={menu} client:visible />

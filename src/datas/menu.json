@@ -1,18 +1,18 @@
 [
     {
         "name":"accueil",
-        "iconPath":"home-icon.png"
+        "iconPath":"home-icon.svg"
     },
     {
         "name":"nature",
-        "iconPath":"nature-icon.png"
+        "iconPath":"nature-icon.svg"
     },
     {
         "name":"portrait",
-        "iconPath":"portrait-icon.png"
+        "iconPath":"portrait-icon.svg"
     },
     {
         "name":"artistique",
-        "iconPath":"artistique-icon.png"
+        "iconPath":"artistique-icon.svg"
     }
 ]

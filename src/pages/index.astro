@@ -5,7 +5,5 @@ import menu from '../datas/menu.json'
 ---
 
 <HomeLayout client:visible menu={menu} title={homeDatas.metas.title} description={homeDatas.metas.description} imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle} twitterDescription={homeDatas.metas.twitterDescription}>
-    {menu.map((item)=>{
-    return <a href={`/photos/${item.name}`}><img src={Astro.resolve(`/assets/${item.iconPath}`)} alt={item.name}></a>
-    })}
+    
 </HomeLayout>

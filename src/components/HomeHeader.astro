@@ -1,17 +1,14 @@
 ---
 const {menu} = Astro.props
 import HomeImage from "../components/HomeImage.vue"
-import Contacts from "../components/Contacts.astro"
-
+import HomeContacts from "../components/HomeContacts.astro"
+import HomeMenu from "../components/HomeMenu.astro"
 ---
 
 <header>
-    <HomeImage client:visible/>
-    <Contacts/>
-    <div class="categories-container">
-        <p>Catégories</p>
-        <div class="categories-menu">
-           
-        </div>
+    <div class="flex justify-between pt-9 pr-11 pl-4">
+        <HomeImage client:visible />
+        <HomeContacts client:visible />
     </div>
+    <HomeMenu menu={menu} client:visible />
 </header>
