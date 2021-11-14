@@ -4,6 +4,22 @@ import homeDatas from '../pagesDatas/home.json'
 import menu from '../datas/menu.json'
 ---
 
-<HomeLayout client:visible menu={menu} title={homeDatas.metas.title} description={homeDatas.metas.description} imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle} twitterDescription={homeDatas.metas.twitterDescription}>
-    
+<HomeLayout client:visible menu={menu} title={homeDatas.metas.title} description={homeDatas.metas.description}
+    imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle}
+    twitterDescription={homeDatas.metas.twitterDescription}>
+
+    <div class="gridPerso gap-x-4 gap-y-6">
+        {homeDatas.photos.map((photo)=>{
+        return <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/c_scale/fl_lossy${photo.photo}`}
+                alt={photo.title} class=" shadow-xl object-contain rounded-md" />
+        })}
+    </div>
 </HomeLayout>
+
+<style>
+
+
+.gridPerso {
+    
+}
+</style>

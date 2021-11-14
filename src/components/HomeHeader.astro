@@ -1,14 +1,23 @@
 ---
-const {menu} = Astro.props
-import HomeImage from "../components/HomeImage.vue"
-import HomeContacts from "../components/HomeContacts.astro"
-import HomeMenu from "../components/HomeMenu.astro"
+const {menu} = Astro.props;
+import HomeImage from "../components/HomeImage.vue";
+import HomeContacts from "../components/HomeContacts.astro";
+import HomeMenu from "../components/HomeMenu.astro";
+
+
+
 ---
 
-<header>
-    <div class="flex justify-between pt-9 pr-11 pl-4">
+<header class=" mb-24">
+    <div class="flex justify-between pt-9">
         <HomeImage client:visible />
-        <HomeContacts client:visible />
+        <HomeContacts client:visible/>
     </div>
-    <HomeMenu menu={menu} client:visible />
+    <HomeMenu menu={menu} client:visible  data-rellax-speed="5" />
 </header>
+
+<!-- add rellax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js"></script>
+<script>
+var rellax = new Rellax('.rellax');
+</script>
