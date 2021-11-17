@@ -8,18 +8,17 @@ import menu from '../datas/menu.json'
     imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle}
     twitterDescription={homeDatas.metas.twitterDescription}>
 
-    <div class="gridPerso gap-x-4 gap-y-6">
+    <div class="masonry-grid gap-x-4 gap-y-6">
         {homeDatas.photos.map((photo)=>{
         return <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/c_scale/fl_lossy${photo.photo}`}
-                alt={photo.title} class=" shadow-xl object-contain rounded-md" />
+            alt={photo.title} class=" shadow-xl object-contain rounded-md bg-transparent" />
         })}
     </div>
 </HomeLayout>
 
 <style>
-
-
-.gridPerso {
-    
-}
+    .masonry-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 </style>
