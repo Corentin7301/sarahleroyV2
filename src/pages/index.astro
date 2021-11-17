@@ -8,17 +8,25 @@ import menu from '../datas/menu.json'
     imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle}
     twitterDescription={homeDatas.metas.twitterDescription}>
 
-    <div class="masonry-grid gap-x-4 gap-y-6">
+    <div class="masonry-grid relative gap-x-4 gap-y-6">
         {homeDatas.photos.map((photo)=>{
         return <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/c_scale/fl_lossy${photo.photo}`}
-            alt={photo.title} class=" shadow-xl object-contain rounded-md bg-transparent" />
+            alt={photo.title} class=" absolute shadow-xl object-contain rounded-md bg-transparent" />
         })}
     </div>
 </HomeLayout>
 
+<script src="{Astro.resolve('/js/minimasonry.min.js')}"></script>
+<script>
+    var masonry = new MiniMasonry({
+        container: '.masonry-grid',
+        minify: false,
+        baseWidth: 100,
+    });
+
+    
+</script>
+
 <style>
-    .masonry-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+
 </style>
