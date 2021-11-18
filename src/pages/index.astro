@@ -8,10 +8,11 @@ import menu from '../datas/menu.json'
     imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle}
     twitterDescription={homeDatas.metas.twitterDescription}>
 
-    <div class="masonry-grid ">
+    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${homeDatas.photos[1].photo}`} alt="Sarah Leroy" class=" logo hidden"/>
+    <div class="masonry-grid">
         {homeDatas.photos.map((photo)=>{
         return <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
-            alt={photo.title} class=" w-[46%] shadow-xl rounded-md bg-transparent" />
+            alt={photo.title} class=" widthOfPhoto w-[47%] shadow-xl rounded-md bg-transparent" />
         })}
     </div>
 </HomeLayout>
@@ -22,8 +23,31 @@ import menu from '../datas/menu.json'
     let masonryGrid = new MagicGrid({
         container: ".masonry-grid", // Required. Can be a class, id, or an HTMLElement.
         static: true, // Required for static content.
-        gutter: 16,
+        gutter: 10,
     });
 
     masonryGrid.listen();
 </script>
+
+<style>
+    .widthOfPhoto:nth-child(2) {
+        --tw-shadow: none;
+        box-shadow: none;
+        padding: 5px 5px 0 5px;
+    }
+
+
+@media (max-width: 373px) {
+.widthOfPhoto {
+    width: 100%;
+}
+.widthOfPhoto:nth-child(2) {
+    display: none;
+}
+.logo {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}}
+</style>
