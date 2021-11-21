@@ -18,7 +18,7 @@ fields:
 - type: text
   name: email
   label: Adresse email
-- name: logo-black
+- name: logo_black
   type: file
   config:
     maxSize: 64
