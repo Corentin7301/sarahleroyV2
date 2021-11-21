@@ -18,3 +18,5 @@ fields:
 - type: text
   name: email
   label: Adresse email
+pages:
+- src/datas/informationDatas.json
