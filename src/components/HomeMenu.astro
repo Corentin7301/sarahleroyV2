@@ -2,13 +2,13 @@
 const {menu} = Astro.props
 ---
 <div class="relative">
-    <div class="categories-container rellax absolute -top-14 right-2 w-2/3 bg-persoBlue rounded-md shadow-xl px-7 py-3" data-rellax-speed="-1">
+    <div class="categories-container rellax absolute -top-8 right-2 w-2/3 bg-persoBlue rounded-md shadow-xl px-7 py-3" data-rellax-speed="-1">
         <p class=" text-lightColor text-center mb-3">Catégories</p>
         <div class="categories-menu flex justify-center items-center space-x-7">
             {menu.map((item)=>{
             if(item.name != "accueil") {
             return <a href={`/photos/${item.name}`}> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
-                alt={item.name} class=" w-11 shadow-xl" /></a>
+                alt={item.name} class=" w-11" /></a>
             }
             })}
         </div>
