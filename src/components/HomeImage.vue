@@ -10,6 +10,7 @@
         </div>
 
         <h2 class=" hidden lg:block text-lightColor text-center text-sm p-2 transition-all">{{HomeDatas.description}}</h2>
+        <img :src="`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${HomeDatas.logo_black}`" alt="" class=" hidden lg:block w-full rounded-md transition-all shadow-xl cursor-auto">
   </div>
 </template>
 
