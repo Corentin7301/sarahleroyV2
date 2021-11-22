@@ -12,14 +12,20 @@ import menu from '../datas/menu.json'
         alt="Sarah Leroy" class=" logo hidden" />
     <div class="masonry-grid ">
         {homeDatas.photos.map((photo)=>{
-        return <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
-            alt={photo.title} class=" widthOfPhoto w-[47%] shadow-xl rounded-md bg-transparent" />
+        return <a data-fslightbox
+            href={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
+            class="widthOfPhoto w-[47%] shadow-xl">
+            <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
+                alt={photo.title} class=" rounded-md" />
+        </a>
         })}
     </div>
 </HomeLayout>
 
 
 <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+<script src="../../js/fslightbox.js"></script>
+
 <script>
     let masonryGrid = new MagicGrid({
         container: ".masonry-grid", // Required. Can be a class, id, or an HTMLElement.
