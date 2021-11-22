@@ -8,8 +8,9 @@ import menu from '../datas/menu.json'
     imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle}
     twitterDescription={homeDatas.metas.twitterDescription}>
 
-    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${homeDatas.photos[1].photo}`} alt="Sarah Leroy" class=" logo hidden"/>
-    <div class="masonry-grid">
+    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${homeDatas.photos[1].photo}`}
+        alt="Sarah Leroy" class=" logo hidden" />
+    <div class="masonry-grid ">
         {homeDatas.photos.map((photo)=>{
         return <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
             alt={photo.title} class=" widthOfPhoto w-[47%] shadow-xl rounded-md bg-transparent" />
@@ -23,7 +24,8 @@ import menu from '../datas/menu.json'
     let masonryGrid = new MagicGrid({
         container: ".masonry-grid", // Required. Can be a class, id, or an HTMLElement.
         static: true, // Required for static content.
-        gutter: 10,
+        gutter: 10, //Space between items. Default: 25(px).
+        useMin: true, // Prioritize shorter columns when positioning items? Default: false.
     });
 
     masonryGrid.listen();
@@ -37,17 +39,30 @@ import menu from '../datas/menu.json'
     }
 
 
-@media (max-width: 373px) {
-.widthOfPhoto {
-    width: 100%;
-}
-.widthOfPhoto:nth-child(2) {
-    display: none;
-}
-.logo {
-    display: block;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 20px;
-}}
+    @media (max-width: 373px) {
+        .widthOfPhoto {
+            width: 100%;
+        }
+
+        .widthOfPhoto:nth-child(2) {
+            display: none;
+        }
+
+        .logo {
+            display: block;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .widthOfPhoto {
+            width: 32%;
+        }
+
+        .widthOfPhoto:nth-child(2) {
+            display: none;
+        }
+    }
 </style>
