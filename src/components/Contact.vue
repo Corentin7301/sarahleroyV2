@@ -20,7 +20,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
       <p class=" text-lightColor text-center lg:text-2xl">Contact</p>
-      <form action="" name="contact-portfolio" netlify netlify-honeypot="bot-field" class=" space-y-3 mt-5 flex flex-col justify-center items-center">
+      <form action="" method="POST" name="contact-portfolio" netlify netlify-honeypot="bot-field" class=" space-y-3 mt-5 flex flex-col justify-center items-center">
         <input type="text" name="name" id="name" placeholder="Nom et prénom">
         <input type="email" name="email" id="email" placeholder="Email">
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
