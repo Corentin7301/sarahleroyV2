@@ -10,9 +10,9 @@
 
     <!-- modale -->
 
-    <div v-if="isOpen" class="fixed z-30 blurPerso top-0 left-0 w-screen h-screen overflow-y-auto overflow-x-hidden">
+    <div v-show="isOpen" class="fixed z-30 blurPerso top-0 left-0 w-screen h-screen overflow-y-auto overflow-x-hidden">
     </div>
-    <div v-if="isOpen"
+    <div v-show="isOpen"
       class=" bg-persoBlue w-[85%] lg:w-1/3 z-50 absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 rounded-md py-5 px-6 transition-all">
       <svg @click="isOpen = false"
         class="absolute top-1 right-1 w-10 h-10 text-lightColor cursor-pointer lg:hover:opacity-75 transition-all"
