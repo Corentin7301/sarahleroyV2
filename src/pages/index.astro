@@ -24,7 +24,7 @@ import menu from '../datas/menu.json'
 
 
 <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-<script src="../../public/js/fslightbox.js"></script>
+<script src={Astro.resolve("/js/fslightbox.js")}></script>
 
 <script>
     let masonryGrid = new MagicGrid({
