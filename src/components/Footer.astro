@@ -1,10 +1,28 @@
 ---
-
+import informationsDatas from "../datas/informationDatas.json"
+import Contact from "../components/Contact.vue"
+import pages from '../datas/pages.json'
 ---
 
-<!-- <form action="" name="contact-portfolio" netlify netlify-honeypot="bot-field" class=" hidden space-y-3 mt-5 flex flex-col justify-center items-center">
-        <input type="text" name="name" id="name" placeholder="Nom et prénom">
-        <input type="email" name="email" id="email" placeholder="Email">
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-        <input type="submit" value="Envoyer" class=" bg-white">
-      </form> -->
+<div class="  flex justify-between items-center px-5">
+    <ul class=" space-y-2">
+        {pages.map((item)=>{
+        return <li>
+            <a href={item.url}
+                class="hover:opacity-75 transition-all block text-lg capitalize text-white">{item.name}</a></li>
+        })
+        }
+    </ul>
+    <div>
+        <a href={informationsDatas.instaUrl} target="_blank"><img src={Astro.resolve('/assets/instagram-icon.svg')}
+                alt="instagram" class=" w-14 h-14 text-lightColor mt-[10px] mb-3"></a>
+        <Contact client:visible />
+    </div>
+</div>
+<div class=" mt-5 px-5">
+    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy/ar_5:3,c_fill,g_face${informationsDatas.logo_white}`}
+        alt="Sarah LEROY" class=" w-40 rounded-md transition-all">
+    <p class=" text-white text-[10px] mt-4 tracking-widest normal-case text-right">© { new Date().getFullYear() }<a
+            href={`mailto:corentin7301@gmail.com`} target="_blank" class=" text-primaryColor transition-all"> Corentin
+            PERROUX</a></p>
+</div>

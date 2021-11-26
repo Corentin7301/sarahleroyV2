@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="isOpen = !isOpen"><svg class="w-11 h-11 text-lightColor" fill="none" stroke="currentColor"
+    <button @click="isOpen = !isOpen"><svg class="w-14 h-14 text-lightColor" fill="none" stroke="currentColor"
         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
@@ -20,7 +20,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
       <p class=" text-lightColor text-center lg:text-2xl">Contact</p>
-      <form action="" method="POST" name="contact-portfolio" netlify netlify-honeypot="bot-field" class=" space-y-3 mt-5 flex flex-col justify-center items-center">
+      <form action="/thanks" method="POST" name="contact-portfolio" netlify netlify-honeypot="bot-field" class=" space-y-3 mt-5 flex flex-col justify-center items-center">
         <input type="text" name="name" id="name" placeholder="Nom et prénom">
         <input type="email" name="email" id="email" placeholder="Email">
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
