@@ -1,5 +1,5 @@
 ---
-label: homePageDatas
+label: pageDatas
 hide_body: true
 fields:
 - name: mainImage
