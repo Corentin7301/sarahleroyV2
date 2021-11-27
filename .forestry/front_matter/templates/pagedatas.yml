@@ -38,3 +38,4 @@ fields:
 pages:
 - src/pagesDatas/home.json
 - src/pagesDatas/nature.json
+- src/pagesDatas/portrait.json
