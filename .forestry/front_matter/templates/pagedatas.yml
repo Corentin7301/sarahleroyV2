@@ -2,6 +2,11 @@
 label: pageDatas
 hide_body: true
 fields:
+- name: mainImage
+  type: file
+  config:
+    maxSize: 10
+  label: Image principale
 - type: field_group_list
   name: photos
   label: photos
