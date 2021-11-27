@@ -2,20 +2,6 @@
 label: pageDatas
 hide_body: true
 fields:
-- name: mainImage
-  type: file
-  config:
-    maxSize: 5
-  label: mainImage
-- name: description
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Description
 - type: field_group_list
   name: photos
   label: photos
