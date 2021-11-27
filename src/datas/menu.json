@@ -4,15 +4,18 @@
         "iconPath":"home-icon.svg"
     },
     {
-        "name":"nature",
-        "iconPath":"nature-icon.svg"
+        "name": "nature",
+        "iconPath": "nature-icon.svg",
+        "labelOfPage": "Photos de <span class='span-color'>nature</span>"
     },
     {
-        "name":"portrait",
-        "iconPath":"portrait-icon.svg"
+        "name": "portrait",
+        "iconPath": "portrait-icon.svg",
+        "labelOfPage": "Photos de <span class='span-color'>portrait</span>"
     },
     {
-        "name":"artistique",
-        "iconPath":"artistique-icon.svg"
+        "name": "artistique",
+        "iconPath": "artistique-icon.svg",
+        "labelOfPage": "Photos <span class='span-color'>artistiques</span>"
     }
 ]
