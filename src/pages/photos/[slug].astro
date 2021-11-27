@@ -1,32 +1,17 @@
 ---
-// import DefaultLayout from '../../layouts/default.astro';
-import menu from '../../datas/menu.json'
-
+import menu from '../../datas/menu.json';
+import PhotosLayout from '../../layouts/photosLayout.astro';
 
 
 const {slug} = Astro.request.params
-import natureDatas from "../../pagesDatas/nature.json"
-import portraitDatas from "../../pagesDatas/portrait.json"
-import artistiqueDatas from "../../pagesDatas/artistique.json"
-let pageDatas = {}
-menu.map((item)=>{
-    if(slug === item.name) {
-        return pageDatas = item.name + "Datas"
-    }
-})
-//if(slug === "nature") {
-//    pageDatas = natureDatas
-//}
-//if(slug === "portrait") {
-//    pageDatas = portraitDatas
-//}
-//if(slug === "artistique") {
-//    pageDatas = artistiqueDatas  
-//}
+
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+const photos = require(`../../pagesDatas/${slug}.json`);
 
 
 export async function getStaticPaths() {
-    const pages = ["portrait","nature","artistique"]
+const pages = ["portrait","nature","artistique"]
     return menu.map((item) => {
         return [
             {
@@ -35,9 +20,24 @@ export async function getStaticPaths() {
         ]
     })
 }
+
+
 ---
 
-<!-- <DefaultLayout client:visible title={pageDatas.metas.title} description={pageDatas.metas.description} imageLink={pageDatas.metas.imageLink} twitterTitle={pageDatas.metas.twitterTitle} twitterDescription={pageDatas.metas.twitterDescription}>
-    <h2 class=" text-persoBlue">{slug}</h2>
-</DefaultLayout> -->
-<h2>{slug}</h2>
+<PhotosLayout client:visible menu={menu} title={photos.metas.title} description={photos.metas.description}
+    imageLink={photos.metas.imageLink} twitterTitle={photos.metas.twitterTitle}
+    twitterDescription={photos.metas.twitterDescription}>
+
+    <!-- <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photos.photos[1].photo}`}
+        alt="Sarah Leroy" class=" logo hidden" />
+    <div class="masonry-grid ">
+        {photos.photos.map((photo)=>{
+        return <a data-fslightbox
+            href={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
+            class="widthOfPhoto w-[47%] shadow-xl">
+            <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
+                alt={photo.title} class=" rounded-md" />
+        </a>
+        })}
+    </div> -->
+</PhotosLayout>
