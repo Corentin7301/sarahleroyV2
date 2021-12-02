@@ -6,16 +6,16 @@
     {
         "name": "nature",
         "iconPath": "nature-icon.svg",
-        "labelOfPage": "Photos de <span class='span-color'>nature</span>"
+        "labelOfPage": "Photos de <span style='color: rgba(17, 157, 164)'>nature</span>"
     },
     {
         "name": "portrait",
         "iconPath": "portrait-icon.svg",
-        "labelOfPage": "Photos de <span class='span-color'>portrait</span>"
+        "labelOfPage": "Photos de <span style='color: rgba(17, 157, 164)'>portrait</span>"
     },
     {
         "name": "artistique",
         "iconPath": "artistique-icon.svg",
-        "labelOfPage": "Photos <span class='span-color'>artistiques</span>"
+        "labelOfPage": "Photos <span style='color: rgba(17, 157, 164)'>artistiques</span>"
     }
 ]
