@@ -10,7 +10,6 @@ const require = createRequire(import.meta.url);
 const photos = require(`../../pagesDatas/${slug}.json`);
 
 export async function getStaticPaths() {
-const pages = ["portrait","nature","artistique"]
     return menu.map((item) => {
         return [
             {
@@ -29,7 +28,7 @@ const pages = ["portrait","nature","artistique"]
 
     <!-- <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photos.photos[1].photo}`}
         alt="Sarah Leroy" class=" logo hidden" /> -->
-    <div class="masonry-grid min-h-[300px] lg:mt-44">
+    <div class="masonry-grid min-h-[300px] lg:mt-20">
         {photos.photos.map((photo)=>{
         return <a data-fslightbox
             href={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
