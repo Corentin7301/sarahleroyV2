@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import HomeDatas from "../pagesDatas/home.json";
+import HomeDatas from "../pagesDatas/accueil.json";
 import informationsDatas from "../datas/informationDatas.json";
   export default {
     data() {

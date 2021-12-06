@@ -42,6 +42,6 @@ fields:
     label: twitterDescription
 pages:
 - src/pagesDatas/artistique.json
-- src/pagesDatas/home.json
+- src/pagesDatas/accueil.json
 - src/pagesDatas/nature.json
 - src/pagesDatas/portrait.json
