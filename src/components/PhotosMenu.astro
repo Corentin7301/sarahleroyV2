@@ -13,11 +13,11 @@ const {slug} = Astro.request.params
             
                 {menu.map((item)=>{
                     if(item.name == "accueil") {
-                        return <a href="/"> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
+                        return <a href="/" class="focus:outline-white"> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
                     alt={item.name} class=" w-11" /></a>
                     }
                 if(item.name != "accueil" && item.name != slug) {
-                return <a href={`/photos/${item.name}`}> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
+                return <a href={`/photos/${item.name}`} class="focus:outline-white"> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
                     alt={item.name} class=" w-11" /></a>
                 }
                 })}
@@ -32,10 +32,10 @@ const {slug} = Astro.request.params
             <div class="categories-menu flex justify-center items-center space-x-7">
                 {menu.map((item)=>{
                     if(item.name == "accueil") {
-                        return <a href="/" class="hover:transform hover:-translate-y-2 transition-all cursor-pointer"><img src={Astro.resolve(`/assets/${item.iconPath}`)} alt={item.name} class=" w-11" /></a>
+                        return <a href="/" class="hover:transform hover:-translate-y-2 transition-all cursor-pointer focus:outline-white"><img src={Astro.resolve(`/assets/${item.iconPath}`)} alt={item.name} class=" w-11" /></a>
                     }
                 if(item.name != "accueil" && item.name != slug) {
-                return <a href={`/photos/${item.name}`} class="hover:transform hover:-translate-y-2 transition-all cursor-pointer"> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
+                return <a href={`/photos/${item.name}`} class="hover:transform hover:-translate-y-2 transition-all cursor-pointer focus:outline-white"> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
                     alt={item.name} class=" w-11 " /></a>
                 }
                 })}

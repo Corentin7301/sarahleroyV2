@@ -11,7 +11,7 @@ const {menu} = Astro.props
             <div class="categories-menu flex justify-center items-center space-x-7">
                 {menu.map((item)=>{
                 if(item.name != "accueil") {
-                return <a href={`/photos/${item.name}`}> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
+                return <a href={`/photos/${item.name}`} class="focus:outline-white"> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
                     alt={item.name} class=" w-11" /></a>
                 }
                 })}
@@ -26,7 +26,7 @@ const {menu} = Astro.props
             <div class="categories-menu flex justify-center items-center space-x-7">
                 {menu.map((item)=>{
                 if(item.name != "accueil") {
-                return <a href={`/photos/${item.name}`} class="hover:transform hover:-translate-y-2 transition-all"> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
+                return <a href={`/photos/${item.name}`} class="hover:transform hover:-translate-y-2 transition-all focus:outline-white"> <img src={Astro.resolve(`/assets/${item.iconPath}`)}
                     alt={item.name} class=" w-11 " /></a>
                 }
                 })}

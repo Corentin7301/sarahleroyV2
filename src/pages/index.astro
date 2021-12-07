@@ -14,7 +14,7 @@ import menu from '../datas/menu.json'
         {homeDatas.photos.map((photo)=>{
         return <a data-fslightbox
             href={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
-            class="widthOfPhoto w-[47%] shadow-xl">
+            class="widthOfPhoto w-[47%] shadow-xl focus:outline-black">
             <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
                 alt={photo.title} class=" rounded-md" />
         </a>
