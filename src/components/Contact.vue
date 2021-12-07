@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button @click="isOpen = !isOpen"><svg class="w-12 h-12 text-lightColor hover:opacity-75 transition-all" fill="none" stroke="currentColor"
-        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <button @click="isOpen = !isOpen" @keydown.esc="escapeKey()" class="focus:outline-white"><svg class="w-12 h-12 text-lightColor hover:opacity-75 transition-all" fill="none"
+        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
         </path>
@@ -10,10 +10,10 @@
 
     <!-- modale -->
 
-    <div v-show="isOpen" class="fixed z-30 blurPerso top-0 left-0 w-screen h-screen ">
+    <div v-show="isOpen" class="fixed z-30 blurPerso top-0 left-0 w-full h-full" @click="isOpen = !isOpen">
     </div>
-    <div v-show="isOpen"
-      class=" bg-persoBlue w-[85%] lg:w-1/3 z-50 absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 rounded-md py-5 px-6 transition-all">
+    <div v-show="isOpen" @keydown.esc="escapeKey()"
+      class=" bg-persoBlue w-[85%] lg:w-1/3 z-50 fixed top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 rounded-md py-5 px-6 transition-all shadow-xl">
       <svg @click="isOpen = false"
         class="absolute top-1 right-1 w-10 h-10 text-lightColor cursor-pointer lg:hover:opacity-75 transition-all"
         fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@
             </path>
           </svg>
           <a :href="`tel:${informationsDatas.phone.phoneUrl}`"
-            class=" text-lightColor lg:hover:opacity-75 transition-all">{{informationsDatas.phone.phoneLabel}}</a>
+            class=" text-lightColor lg:hover:opacity-75 transition-all focus:outline-white">{{informationsDatas.phone.phoneLabel}}</a>
         </div>
         <div class="flex items-center space-x-3 ">
           <svg class="w-6 h-6 text-lightColor" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -45,7 +45,7 @@
             </path>
           </svg>
           <a :href="`mailto:${informationsDatas.email}`"
-            class=" text-lightColor lg:hover:opacity-75 transition-all">{{informationsDatas.email}}</a>
+            class=" text-lightColor lg:hover:opacity-75 transition-all focus:outline-white">{{informationsDatas.email}}</a>
         </div>
       </div>
     </div>
@@ -63,17 +63,33 @@
         informationsDatas,
       }
     },
+    methods: {
+      escapeKey() {
+        this.isOpen = !this.isOpen
+      }
+    },
+    watch: {
+      isOpen: (isOpen) => {
+        const body = document.querySelector("body")
+        if(isOpen == true) {
+          console.log(body);
+          body.style.overflow = "hidden";
+        } else {
+          body.style.overflow = "auto";
+        }
+      }
+    }
   }
 </script>
 
 <style scoped lang="scss">
   .blurPerso {
-    backdrop-filter: blur(11px)
+    backdrop-filter: blur(11px);
   }
 
   input,
   textarea {
-    @apply w-full block rounded-md py-1 px-2 m-auto;
+    @apply w-full block rounded-md py-1 px-2 m-auto focus:outline-white;
   }
 
   input::placeholder,
