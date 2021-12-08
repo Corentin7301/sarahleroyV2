@@ -1,0 +1,18 @@
+---
+import OtherLayout from '../layouts/otherLayout.astro';
+---
+
+<OtherLayout client:visible title="404 ^^ Sarah Leroy">
+    <div class=" space-y-10">
+        <img src="https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy/ar_5:3,c_fill,g_face/v1635875987/sarahleroy.fr/Shooting_Sarah_foret_16_11_20_s-7_rgmtgy.jpg"
+            alt="" class=" w-full shadow-xl rounded-md mt-5 lg:mt-16">
+        <div class="flex flex-col justify-center items-center space-y-5">
+            <img src={Astro.resolve("/assets/404.svg")} alt="" class=" w-3/4">
+            <p>Oh... je crois que tu t'es perdu...</p>
+        </div>
+        <div class="flex flex-col justify-center items-center space-y-5"><a href="/" class=" w-1/2">
+            <img src={Astro.resolve("/assets/home2.svg")} alt="" class=" w-full"></a>
+            <a href="/">On retourne à la maison ?</a>
+        </div>
+    </div>
+</OtherLayout>
