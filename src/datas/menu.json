@@ -1,21 +1,21 @@
 [
     {
         "name":"accueil",
-        "iconPath":"home2.svg"
+        "iconPath":"home.svg"
     },
     {
         "name": "nature",
-        "iconPath": "mountain2.svg",
+        "iconPath": "mountain.svg",
         "labelOfPage": "Photos de <span style='color: rgba(17, 157, 164)'>nature</span>"
     },
     {
         "name": "portrait",
-        "iconPath": "face2.svg",
+        "iconPath": "face.svg",
         "labelOfPage": "Photos de <span style='color: rgba(17, 157, 164)'>portrait</span>"
     },
     {
         "name": "artistique",
-        "iconPath": "brush2.svg",
+        "iconPath": "brush.svg",
         "labelOfPage": "Photos <span style='color: rgba(17, 157, 164)'>artistiques</span>"
     }
 ]
