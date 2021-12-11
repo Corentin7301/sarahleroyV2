@@ -102,7 +102,7 @@
     color: rgba(0, 0, 0, 0.45);
 
     &:hover {
-      @apply text-lightColor bg-persoBlue border-lightColor box-border transition-all;
+      @apply text-lightColor bg-persoBlue border-lightColor transition-all;
     }
   }
 </style>
