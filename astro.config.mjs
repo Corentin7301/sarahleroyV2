@@ -14,7 +14,6 @@ export default {
     tailwindConfig: './tailwind.config.js'
   },
   renderers: [
-    "@astrojs/renderer-svelte",
-    "@astrojs/renderer-vue"
+    "@astrojs/renderer-vue",
   ],
 };
