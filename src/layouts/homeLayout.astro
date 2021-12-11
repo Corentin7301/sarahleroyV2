@@ -45,14 +45,14 @@ import Footer from "../components/Footer.astro";
 
 <body class="bg-lightColor font-montserrat">
     <main class=" max-w-7xl m-auto px-5 lg:py-16 lg:px-0">
-        <HomeHeader client:load menu={menu} />
+        <HomeHeader client:visible menu={menu} />
 
         <slot />
 
     </main>
     <footer class="bg-persoBlue rounded-t-md pt-9 pb-2 mt-5">
         <!-- COMPONENT -->
-        <Footer />
+        <Footer client:visible />
     </footer>
 </body>
 

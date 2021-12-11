@@ -44,7 +44,7 @@ import Footer from "../components/Footer.astro";
 </head>
 
 <body class="bg-lightColor font-montserrat ">
-        <PhotosHeader client:load menu={menu} mainPhoto={mainPhoto} />
+        <PhotosHeader client:visible menu={menu} mainPhoto={mainPhoto} />
     <main class=" max-w-7xl m-auto px-5 lg:px-0">
 
         <slot />
@@ -52,7 +52,7 @@ import Footer from "../components/Footer.astro";
     </main>
     <footer class="bg-persoBlue rounded-t-md pt-9 pb-2 mt-5">
         <!-- COMPONENT -->
-        <Footer />
+        <Footer client:visible />
     </footer>
 </body>
 
