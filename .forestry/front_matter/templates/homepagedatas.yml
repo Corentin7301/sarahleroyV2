@@ -49,3 +49,5 @@ fields:
   - type: text
     name: twitterDescription
     label: twitterDescription
+pages:
+- src/pagesDatas/accueil.json
