@@ -25,7 +25,6 @@ sections:
 - type: document
   path: src/pagesDatas/mentionsLegales.md
   label: Mentions légales
-  match: "**/*"
 upload_dir: sarahleroy.fr
 public_path: "/sarahleroy.fr"
 front_matter_path: ''
