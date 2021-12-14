@@ -8,14 +8,14 @@ import menu from '../datas/menu.json'
     imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle}
     twitterDescription={homeDatas.metas.twitterDescription}>
 
-    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${homeDatas.photos[1].photo}`}
+    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${homeDatas.photos[1].photo}`}
         alt="Sarah Leroy" class=" logo hidden" />
     <div class="masonry-grid ">
         {homeDatas.photos.map((photo)=>{
         return <a data-fslightbox
-            href={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
+            href={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${photo.photo}`}
             class="widthOfPhoto w-[47%] shadow-xl focus:outline-black">
-            <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photo.photo}`}
+            <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${photo.photo}`}
                 alt={photo.title} class=" rounded-md" />
         </a>
         })}
