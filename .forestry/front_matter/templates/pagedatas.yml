@@ -2,7 +2,7 @@
 label: pageDatas
 hide_body: true
 fields:
-- name: mainPhoto
+- name: mainImage
   type: file
   config:
     maxSize: 10
