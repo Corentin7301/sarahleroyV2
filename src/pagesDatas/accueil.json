@@ -1,13 +1,9 @@
 {
-  "mainImage": "/v1635875987/sarahleroy.fr/Shooting_Sarah_foret_16_11_20_s-7_rgmtgy.jpg",
+  "mainImage": "/v1637170913/sarahleroy.fr/hello_ampoule-5_s_wz1fmd.jpg",
   "photos": [
     {
       "title": "HELLO",
       "photo": "/v1637170913/sarahleroy.fr/hello_ampoule-5_s_wz1fmd.jpg"
-    },
-    {
-      "title": "LOGO (NE PAS SUPPRIMER, 2e POSITION !)",
-      "photo": "/v1636904077/sarahleroy.fr/logo-black_sarah-leroy_bcne1f.svg"
     },
     {
       "title": "Belle lune",
@@ -30,6 +26,5 @@
     "twitterDescription": "Sarah Leroy, photographe nature, de portrait et artistique",
     "imagelink": ""
   },
-  "description": "Je m’appelle Sarah Leroy, je suis passionnée de photo depuis 4 ans, je fais plein de styles différents !\n\nJe te laisse apprécier ma galerie !",
-  "mainPhoto": "/v1635875987/sarahleroy.fr/Shooting_Sarah_foret_16_11_20_s-7_rgmtgy.jpg"
+  "description": "Je m’appelle Sarah Leroy, je suis passionnée de photo depuis 4 ans, je fais plein de styles différents !\n\nJe te laisse apprécier ma galerie !"
 }

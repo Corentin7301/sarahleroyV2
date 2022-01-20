@@ -1,5 +1,5 @@
 ---
-let {menu, mainPhoto,title,description,imageLink,twitterTitle,twitterDescription} = Astro.props;
+let {menu, mainImage,title,description,imageLink,twitterTitle,twitterDescription} = Astro.props;
 import defaultMetas from "../datas/defaultMetas.json";
 import PhotosHeader from "../components/PhotosHeader.astro";
 import Footer from "../components/Footer.astro";
@@ -44,7 +44,7 @@ import Footer from "../components/Footer.astro";
 </head>
 
 <body class="bg-lightColor font-montserrat ">
-        <PhotosHeader client:visible menu={menu} mainPhoto={mainPhoto} />
+        <PhotosHeader client:visible menu={menu} mainImage={mainImage} />
     <main class=" max-w-7xl m-auto px-5 lg:px-0">
 
         <slot />

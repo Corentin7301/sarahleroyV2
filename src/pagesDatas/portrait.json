@@ -2,10 +2,6 @@
   "mainImage": "/v1637170913/sarahleroy.fr/hello_ampoule-5_s_wz1fmd.jpg",
   "photos": [
     {
-      "title": "LOGO (NE PAS SUPPRIMER, 1e POSITION !)",
-      "photo": "/v1636904077/sarahleroy.fr/logo-black_sarah-leroy_bcne1f.svg"
-    },
-    {
       "title": "Celina, Aurelien & their baby",
       "photo": "/v1641235757/sarahleroy.fr/Celina_Aurelien_Juillet_2021-15_tu8wqx.jpg"
     },
@@ -76,6 +72,5 @@
     "twitterTitle": "",
     "twitterDescription": "Photographie de portrait de Sarah LEROY",
     "imagelink": ""
-  },
-  "mainPhoto": "/v1637170913/sarahleroy.fr/hello_ampoule-5_s_wz1fmd.jpg"
+  }
 }

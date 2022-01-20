@@ -2,13 +2,14 @@
 import HomeLayout from '../layouts/homeLayout.astro';
 import homeDatas from '../pagesDatas/accueil.json'
 import menu from '../datas/menu.json'
+import informationDatas from '../datas/informationDatas.json'
 ---
 
 <HomeLayout client:visible menu={menu} title={homeDatas.metas.title} description={homeDatas.metas.description}
     imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle}
     twitterDescription={homeDatas.metas.twitterDescription}>
 
-    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${homeDatas.photos[1].photo}`}
+    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${informationDatas.logo_black}`}
         alt="Sarah Leroy" class=" logo hidden" />
     <div class="masonry-grid ">
         {homeDatas.photos.map((photo)=>{

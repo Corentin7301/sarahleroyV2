@@ -1,7 +1,7 @@
 ---
-import menu from '../../datas/menu.json';
 import PhotosLayout from '../../layouts/photosLayout.astro';
-
+import menu from '../../datas/menu.json'
+import informationDatas from '../../datas/informationDatas.json'
 
 const {slug} = Astro.request.params
 
@@ -18,17 +18,14 @@ export async function getStaticPaths() {
         ]
     })
 }
-
-
 ---
-
-<PhotosLayout client:visible menu={menu} mainPhoto={photos.mainPhoto} title={photos.metas.title} description={photos.metas.description}
+<PhotosLayout client:visible menu={menu} mainImage={photos.mainImage} title={photos.metas.title} description={photos.metas.description}
     imageLink={photos.metas.imageLink} twitterTitle={photos.metas.twitterTitle}
     twitterDescription={photos.metas.twitterDescription}>
 
-    <!-- <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy${photos.photos[1].photo}`}
-        alt="Sarah Leroy" class=" logo hidden" /> -->
-    <div class="masonry-grid min-h-[300px] lg:mt-20">
+    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${informationDatas.logo_black}`}
+        alt="Sarah Leroy" class=" logo hidden" />
+    <div class="masonry-grid ">
         {photos.photos.map((photo)=>{
         return <a data-fslightbox
             href={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${photo.photo}`}
@@ -55,21 +52,11 @@ export async function getStaticPaths() {
     masonryGrid.listen();
 </script>
 
-<style scoped>
-    .widthOfPhoto:nth-child(1) {
-        --tw-shadow: none;
-        box-shadow: none;
-        padding: 5px 5px 0 5px;
-    }
-
+<style>
 
     @media (max-width: 373px) {
         .widthOfPhoto {
             width: 100%;
-        }
-
-        .widthOfPhoto:nth-child(1) {
-            display: none;
         }
 
         .logo {
@@ -83,10 +70,6 @@ export async function getStaticPaths() {
     @media (min-width: 1024px) {
         .widthOfPhoto {
             width: 32%;
-        }
-
-        .widthOfPhoto:nth-child(1) {
-            display: none;
         }
     }
 </style>
