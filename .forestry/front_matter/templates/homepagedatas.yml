@@ -6,7 +6,7 @@ fields:
   type: file
   config:
     maxSize: 5
-  label: mainImage
+  label: Photo principale
 - name: description
   type: textarea
   default: ''
